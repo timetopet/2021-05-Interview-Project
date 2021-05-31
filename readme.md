@@ -13,6 +13,11 @@
 2. From the command line run 'composer install'. This will take 5-10 minutes depending your internet connection and computer.
 3. Start the local server `php artisan serve` and open http://localhost:8000 in your browser.
 
+
+To help we've already created a migration and setup a SQLite database in app/database/database.sqlite. You should not need to manage the databse schema or make any adjustments to it. Simple insert new data and read from it.
+
+In addition we've setup the initial route in `routes.php` and created a `WidgetController.php`.
+
 # Expectations
 
 * We expect this project to take roughly 2-3 hours. 
@@ -35,6 +40,8 @@ Upon initial load, this HTML page should display a form to create a widget. A wi
 Form should handle input and enforce input requirements.
 
 Once at least one widget has been created, this page should show a list of all available widgets. Clicking on a widget should allow us to edit it. We should also have the option to create additional widgets as well.
+
+Note: This url has already been created and setup in `routes.php`. 
 
 ### GET:http://localhost:8000/api/widgets
 
