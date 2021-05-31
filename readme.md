@@ -16,7 +16,7 @@
 
 To help we've already created a migration and setup a SQLite database in app/database/database.sqlite. You should not need to manage the databse schema or make any adjustments to it. You should be able to use Eloquent to insert, read and update.
 
-In addition we've setup the initial `./widgets` route in `routes.php` and created a `WidgetController.php` to get you started.
+In addition we've setup the initial `/widgets` route in `routes.php` and created a `WidgetController.php` to get you started.
 
 # Expectations
 
@@ -49,11 +49,18 @@ Note: This url has already been created and setup in `routes.php`.
 
 This API endpoint should return a list of all created widgets as a JSON string.
 
-### POST:https://localhost:8000/api/widget/delete
+### GET:https://localhost:8000/api/widget/delete/{id}
 
-This API endpoint should accept a JSON payload in the request body `{"id": 9999 }` allowing us to delete an existing widget. 
+This API endpoint delete the Widget with the supplied id.
 
 The response should be an empty string. If we have provided an invalid ID, any HTTP code of 500 should be returned.
+
+# Deliverables
+
+You have two options. 
+
+1. You can push your changes and give us access to your repository on Github and we will review your code directly there (preferred).
+2. Email us a zip of the entire project directory.
 
 # Bonus Points
 
