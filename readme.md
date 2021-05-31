@@ -6,17 +6,17 @@
 
 # Installation
 
-1. Create a new **private** repository from your personal Github account.
-2. `git clone` this new empty project to your local machine.
-3. Download this project and unzip to the new repository your created.
+1. Create a new **private** repository in your personal Github account `ttp-interview-submission`.
+2. `git clone` the empty `ttp-interview-submission` project to your local machine.
+3. [Download this project](https://github.com/timetopet/2021-05-Interview-Project/archive/refs/heads/master.zip) and unzip to the project directory created during the clone operation.
 4. **Important** Make an initial commit with the unzipped files.
 2. From the command line run 'composer install'. This will take 5-10 minutes depending your internet connection and computer.
-3. Start the local server `php artisan serve` and open http://localhost:8000 in your browser.
+3. Start the local server `php artisan serve` and open http://localhost:8000/widgets in your browser.
 
 
-To help we've already created a migration and setup a SQLite database in app/database/database.sqlite. You should not need to manage the databse schema or make any adjustments to it. Simple insert new data and read from it.
+To help we've already created a migration and setup a SQLite database in app/database/database.sqlite. You should not need to manage the databse schema or make any adjustments to it. You should be able to use Eloquent to insert, read and update.
 
-In addition we've setup the initial route in `routes.php` and created a `WidgetController.php`.
+In addition we've setup the initial `./widgets` route in `routes.php` and created a `WidgetController.php` to get you started.
 
 # Expectations
 
@@ -26,6 +26,8 @@ In addition we've setup the initial route in `routes.php` and created a `WidgetC
 * Your submission will be reviewed on usability (of HTML page) and code quality. 
  
 # Project Requirements
+
+Note: you can create additional routes + urls to support the UI if needed.
 
 ### GET:http://localhost:8000/widgets
 
@@ -47,28 +49,13 @@ Note: This url has already been created and setup in `routes.php`.
 
 This API endpoint should return a list of all created widgets as a JSON string.
 
-### POST:https://localhost:8000/api/widget/create
+### POST:https://localhost:8000/api/widget/delete
 
-This API endpoint should accept a JSON payload in the request body `{"name": "test widget", "color": "#0da2ff","description": "test description" }` allowing us to create a new widget. 
+This API endpoint should accept a JSON payload in the request body `{"id": 9999 }` allowing us to delete an existing widget. 
 
-The response should return the newly created widget as a JSON string assuming input passes validation. Any issues with request should return a simple JSON response of form 
+The response should be an empty string. If we have provided an invalid ID, any HTTP code of 500 should be returned.
 
-```
-{
-    "error": "This is what is wrong with your request"
-}
-```
+# Bonus Points
 
-### POST:https://localhost:8000/api/widget/edit
-
-This API endpoint should accept a JSON payload in the request body `{"id": 1,"name": "test widget", "color": "#0da2ff","description": "test description" }` allowing us to modify an existing widget.
-
-The response should return the updated widget as a JSON string assuming input passes validation. Any issues with request should return a simple JSON response of form 
-
-```
-{
-    "error": "This is what is wrong with your request"
-}
-```
-
+* Given more time, what improvements to the existing codebase would you make? 
 
