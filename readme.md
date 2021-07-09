@@ -9,9 +9,9 @@
 1. Create a new **private** repository in your personal Github account `ttp-interview-submission`.
 2. `git clone` the empty `ttp-interview-submission` project to your local machine.
 3. [Download this project](https://github.com/timetopet/2021-05-Interview-Project/archive/refs/heads/master.zip) and unzip to the project directory created during the clone operation.
-4. **Important** Make an initial commit with the unzipped files.
-2. From the command line run 'composer install'. This will take 5-10 minutes depending your internet connection and computer.
-3. Start the local server `php artisan serve` and open http://localhost:8000/widgets in your browser.
+4. **Important** Make an initial commit with the unzipped files before making any changes.
+5. From the command line run 'composer install'. This will take 5-10 minutes depending your internet connection and computer.
+6. Start the local server `php artisan serve` and open http://localhost:8000/widgets in your browser.
 
 
 To help we've already created a migration and setup a SQLite database in app/database/database.sqlite. You should not need to manage the databse schema or make any adjustments to it. You should be able to use Eloquent to insert, read and update.
