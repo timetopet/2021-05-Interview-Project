@@ -2,7 +2,7 @@
 ## Prerequisites
 
 * [composer](https://getcomposer.org/download/) needs to be installed on your and available globally.
-* Your local machine needs PHP 7.4 or later.
+* Your local machine (or development environment) needs PHP 7.4.
 
 # Installation
 
